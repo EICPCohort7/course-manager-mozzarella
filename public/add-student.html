@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <title>Add a student</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <main class="container">
@@ -27,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <form>
+          <form id="my-form">
             <!-- div>label.form-label+input:text.form-control -->
             <div class="mb-2">
               <label for="first-name" class="form-label">First Name</label>
@@ -54,13 +55,24 @@
               <input type="text" name="city" id="city" class="form-control" />
             </div>
             <div class="mb-2">
-              <label for="province" class="form-label">State/Province</label>
+              <label for="country" class="form-label">Country</label>
+              <select name="country" id="country">
+                <option value="Canada">Canada</option>
+                <option value="US">US</option>
+                <option value="UK">UK</option>
+              </select>
+            </div>
+
+            <div class="mb-2" data-show-if="country:US">
+              <label for="province" class="form-label">State</label>
               <input type="text" name="province" id="province" class="form-control" />
             </div>
-            <div class="mb-2">
-              <label for="country" class="form-label">Country</label>
-              <input type="text" name="country" id="country" class="form-control" />
+
+            <div class="mb-2" data-show-if="country:Canada">
+              <label for="province" class="form-label">Province</label>
+              <input type="text" name="province" id="province" class="form-control" />
             </div>
+
             <div class="mb-2">
               <label for="postal-code" class="form-label">Zip/Postal Code</label>
               <input type="text" name="postalCode" id="postal-code" class="form-control" />
@@ -71,7 +83,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <button class="btn btn-primary">Add</button>
+                <button class="btn btn-primary" id="addBttn">Add</button>
                 <input type="reset" value="Reset" class="btn btn-warning" />
               </div>
             </div>
@@ -79,5 +91,6 @@
         </div>
       </div>
     </main>
+    <script src="add-student.js" type="module"></script>
   </body>
 </html>

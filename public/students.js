@@ -1,5 +1,3 @@
-import { students } from './data/all-data.js';
-
 let leftSide = document.getElementById('left-side');
 let leftSideList = document.createElement('ul');
 
