@@ -55,11 +55,18 @@
             </div>
             <div class="mb-2">
               <label for="province" class="form-label">State/Province</label>
-              <input type="text" name="province" id="province" class="form-control" />
+              <select name="province" id="province" class="form-control">
+              </select>
+              <!-- <input type="text" name="province" id="province" class="form-control" /> -->
             </div>
             <div class="mb-2">
               <label for="country" class="form-label">Country</label>
-              <input type="text" name="country" id="country" class="form-control" />
+              <select name="country" id="country" class="form-control">
+                <option value="ca">Canada</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+              </select>
+              <!-- <input type="text" name="country" id="country" class="form-control" /> -->
             </div>
             <div class="mb-2">
               <label for="postal-code" class="form-label">Zip/Postal Code</label>
@@ -79,5 +86,6 @@
         </div>
       </div>
     </main>
+    <script src="drop-down.js" type="module"></script>
   </body>
 </html>
