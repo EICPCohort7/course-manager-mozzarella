@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Add a student</title>
   </head>
   <body>
@@ -27,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <form>
+          <form id="form">
             <!-- div>label.form-label+input:text.form-control -->
             <div class="mb-2">
               <label for="first-name" class="form-label">First Name</label>
@@ -76,8 +77,8 @@
             </div>
             <div class="row">
               <div class="col">
-                <button type="submit" class="btn btn-primary">Add</button>
-                <input type="reset" value="Reset" class="btn btn-warning" />
+                <button type="submit" class="btn btn-primary" id="submit-btn">Add</button>
+                <input type="submit" value="Submit" class="btn btn-warning" />
               </div>
             </div>
           </form>
